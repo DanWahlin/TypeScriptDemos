@@ -1,0 +1,112 @@
+﻿body {
+  margin: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+iframe {
+   background: #fff;
+   border: 0px;
+   width:90%;
+   height:100%;
+   min-height:600px;
+}
+    
+.editor { 
+    height:100%;
+    min-height:600px;
+    margin-top: 6px;
+    font-size:16px !important;
+}
+
+#runCode {
+    margin-left:10px;
+}
+
+#samples {
+    width:400px;
+    font-size: 18px;
+}
+
+.nav {
+    background: #547DFD;
+}
+
+.nav-tabs>li {
+    width:10%;
+    border-left: 1px solid #fff;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0px;
+    color: #fff;
+    margin-right:0px;
+    text-align:center;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: #bbbbbb;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    background: #FFD90D;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-tabs>li.active>a {
+    background: #FFD90D;
+    color:#000;
+    font-weight:bold;
+}
+
+.nav-tabs>li.active>a:after {
+    border-top-color: #FFD90D;
+}
+
+.nav-tabs>li.active>a:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1000;
+    border-top: 8px solid #ffd800;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-left: -8px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover {
+    background: #ffd800;
+    color: #000;
+}
+
+/* Critical overrides to allow ACE editor to */
+.tab-content>.tab-pane {
+    position:absolute;
+    display: inline;
+    visibility: hidden;
+    width: 90%;
+}
+
+.tab-content>.active {
+  position: absolute;
+  display:inline;
+  visibility:visible;
+  width: 90%;
+}
+
+/*#samples { 
+    margin: 10px;
+    padding: 10px; 
+    border: 2px solid #efefef; 
+    width: 400px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#samples > ul { display: none; }
+#samples:hover > ul {display: block; background: #f9f9f9; border-top: 1px solid purple;}
+#samples:hover > ul > li { padding: 5px; border-bottom: 1px solid #4f4f4f;}
+#samples:hover > ul > li:hover { background: white;}
+#samples:hover > ul > li:hover > a { color: red; }*/

@@ -1,0 +1,25 @@
+﻿body {
+}
+
+input {
+    width: 30px;
+}
+
+button {
+    width:60px;
+}
+
+.Calculator
+{
+    width:200px;
+}
+
+#Output {
+    font-weight:bold;
+    font-size:16pt;
+}
+
+
+
+
+

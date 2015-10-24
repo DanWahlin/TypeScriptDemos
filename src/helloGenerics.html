@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple TypeScript Class</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <h1>Generics Demo</h1>
+    <pre>
+    var numbers = new Array<number>();
+    numbers.push(1);
+    numbers.push(2);
+
+    var names = new Array<string>();
+    names.push('Jane');
+    names.push('John');
+
+    numbers.forEach((n) => console.log(n));
+    names.forEach((n) => console.log(n));
+    </pre>
+
+    <div id="content"></div>
+
+    <script src="js/helloGenerics.js"></script>
+</body>
+</html>

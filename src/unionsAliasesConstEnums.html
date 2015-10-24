@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Union Types, Type Aliases, and Const Enums</title>
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <h1>Union Types</h1>
+    View the developer tools console to see the output.
+    <pre>
+    function showTotal(total: number | number[]) {
+        if (typeof total === 'number') {
+            console.log('total number union type = ' + total);
+        }
+        else {
+            var sum: number = total.reduce(function (prevVal, currVal, index, array) {
+                return prevVal + currVal;
+            });
+            console.log('total array union type = ' + sum);
+        }
+    }
+
+    var values : number[] = [5, 5, 5, 5];
+    showTotal(values);
+    showTotal(50);
+    </pre>
+
+    <h1>Type Aliases</h1>
+    View the developer tools console to see the output.
+    <pre>
+    type int = number;
+    type float = number;
+    type StringArray = string[];
+    type NumberArray = number[];
+
+    var x: int = 5;
+    var lat: float = 120.05;
+    var names: StringArray = ['Ted', 'Michelle'];
+    var ages: NumberArray = [35, 55, 83];
+
+    console.log('type alias x : int = ' + x);
+    console.log('type alias lat : float = ' + lat);
+    console.log('type alias names : StringArray = ' + names);
+    console.log('type alias ages : NumberArray = ' + ages);
+    </pre>
+
+    <h1>Constant Enums</h1>
+    View the developer tools console to see the output.
+    <pre>
+    const enum Gender { Male, Female };
+    enum NonConstGender { Male, Female };
+
+    var gender = Gender.Female;
+    var nonConstGender = NonConstGender.Male;
+
+    console.log('Gender is ' + gender);
+    console.log('NonConstGender is ' + nonConstGender);
+    </pre>
+
+    <script src="js/unionTypes.js"></script>
+    <script src="js/typeAliases.js"></script>
+    <script src="js/constEnums.js"></script>
+</body>
+</html>
