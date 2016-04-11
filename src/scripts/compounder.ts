@@ -13,7 +13,7 @@
     };
 
     //Lambda function
-    var $ = (id) => document.getElementById(id);
+    var $ = (id: any) => document.getElementById(id);
 
     var totalButton: HTMLButtonElement = <HTMLButtonElement>$('totalButton'),
         amount: HTMLInputElement = <HTMLInputElement>$('amount'),

@@ -22,7 +22,7 @@
         result.innerHTML = msg;
     }
 
-    var $ = (id) => document.getElementById(id);
+    var $ = (id: any) => document.getElementById(id);
 
     var addressButton: HTMLButtonElement = <HTMLButtonElement>$('addressButton'),
         address: HTMLInputElement = <HTMLInputElement>$('address'),

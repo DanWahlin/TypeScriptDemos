@@ -1,20 +1,26 @@
 {
-  "name": "TSGulpDemo",
+  "name": "intro-to-typescript",
   "version": "1.0.0",
-  "description": "Using Gulp to Compile TypeScript",
-  "author": "Dan Wahlin",
+  "description": "Introduction to TypeScript",
   "scripts": {
-    "tsc": "tsc --project src --watch --sourceMap --outDir src/js",
-    "start": "live-server --open=src"
+    "postinstall": "",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch",
+    "start": "concurrently \"npm run tsc:w\" \"superstatic\" "
   },
   "dependencies": {
-
+    "superstatic": "^4.0.2"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-typescript": "^2.9.2",
-    "gulp-uglify": "^1.4.2",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^4.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^4.3.3",
+    "gulp-typescript": "^2.12.1",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.9",
+    "typings":"^0.7.9",
+    "concurrently": "^2.0.0"
   }
 }
