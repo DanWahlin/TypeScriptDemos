@@ -1,6 +1,5 @@
 examples/**/scripts/**/*.js.map
 examples/**/scripts/**/*.js
-examples/**/app/**/*.js
 
 node_modules
 jspm_packages
