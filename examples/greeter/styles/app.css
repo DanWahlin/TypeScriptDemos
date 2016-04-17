@@ -1,0 +1,12 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+}
+
+span {
+    font-style: italic;
+}
+
+pre {
+    font-size: 18px;
+}

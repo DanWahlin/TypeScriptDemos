@@ -1,0 +1,8 @@
+{
+  "description": "Parameter Types",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}

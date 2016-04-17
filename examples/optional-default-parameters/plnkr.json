@@ -1,0 +1,8 @@
+{
+  "description": "Optional and Default Parameters",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}

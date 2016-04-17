@@ -1,20 +1,13 @@
-# Running the Application
+# TypeScript Examples
 
-## Option 1: Use Gulp
+## Running the Application
 
-1. Run npm install
+1. Install global pre-requisites:
 
-2. Run npm run tsc
+`npm install typescript superstatic -g`
 
-## Option 2: Use tsc
+2. Run `npm install` 
 
-1. Install global pre-requisites npm install typescript live-server -g
+4. Run `npm start` to compile the TypeScript and start the server
 
-2. Run npm install 
 
-3. Run npm run tsc to start the TypeScript compiler and watch for changes
-
-4. Run npm start in a separate terminal window to start the server and launch the app
-
-After compiling the TypeScript code you can use a server (superstatic or live-server works great) 
-to view the HTML files in the src folder.

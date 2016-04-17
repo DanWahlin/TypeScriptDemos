@@ -1,0 +1,8 @@
+{
+  "description": "Working with TypeScript Types",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}

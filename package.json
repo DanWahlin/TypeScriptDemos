@@ -1,8 +1,11 @@
 {
-  "name": "intro-to-typescript",
-  "version": "1.0.0",
-  "description": "Introduction to TypeScript",
+  "name": "typescript-examples",
+  "version": "0.0.1",
   "scripts": {
+    "plunk": "gulp build-plunkers",
+    "add-bp": "gulp add-example-boilerplate",
+    "rm-bp": "gulp remove-example-boilerplate",
+    "all": "npm run rm-bp && npm run add-bp && npm run plunk",
     "postinstall": "",
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
@@ -12,7 +15,17 @@
     "superstatic": "^4.0.2"
   },
   "devDependencies": {
+    "canonical-path": "0.0.2",
+    "fs-extra": "^0.24.0",
+    "globby": "^4.0.0",
+    "jsdom": "^8.0.2",
+    "lodash": "^3.10.1",
+    "minimatch": "^2.0.10",
+    "mkdirp": "^0.5.1",
+    "q": "^1.4.1",
     "gulp": "^3.9.1",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-util": "^3.0.7",
     "gulp-debug": "^2.1.2",
     "gulp-inject": "^4.0.0",
     "gulp-sourcemaps": "^1.6.0",

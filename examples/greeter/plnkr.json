@@ -1,0 +1,8 @@
+{
+  "description": "Greeter Examples - Classes and Interfaces",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}

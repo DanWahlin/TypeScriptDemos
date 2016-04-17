@@ -1,0 +1,8 @@
+{
+  "description": "Working with Classes",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}

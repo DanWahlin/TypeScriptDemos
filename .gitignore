@@ -1,5 +1,13 @@
-typings
-src/**/*.js
-src/**/*.map
+**/*.map
+examples/**/scripts/**/*.js
+examples/**/app/**/*.js
+
 node_modules
 jspm_packages
+bower_components
+typings
+
+plnkr.html
+#plnkr.demo.html
+
+npm-debug.log

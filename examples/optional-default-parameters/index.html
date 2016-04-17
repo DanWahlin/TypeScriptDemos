@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Optional, Default, Rest Parameters</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Optional, Default, Rest Parameters</h1>
+        <h3>Enter Your Address</h3>
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">Address:</div>
+                <div class="col-md-8"><input type="text" id="address" class="form-control" value="1234 Anywhere St." /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Address 2 (optional):</div>
+                <div class="col-md-8"><input type="text" id="address2" class="form-control" value="" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">City:</div>
+                <div class="col-md-8"><input type="text" id="city" class="form-control" value="Seattle" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><button id="addressButton" class="btn btn-success">Save</button></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Final Address:</div>
+                <div class="col-md-8" id="result"></div>
+            </div>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script src="scripts/optionalDefaultRestParameters.js"></script> 
+</body>
+</html>

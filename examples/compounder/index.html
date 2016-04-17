@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Using TypeScript Functions</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Using TypeScript Functions</h1>
+        <h3>Compound Interest Calculator</h3>
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">Amount:</div>
+                <div class="col-md-8"><input type="number" id="amount" class="form-control" value="100" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Interest Rate:</div>
+                <div class="col-md-8"><input type="number" id="rate" class="form-control" value="5" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Years:</div>
+                <div class="col-md-8"><input type="number" id="years" class="form-control" value="1" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><button id="totalButton" class="btn btn-success">Get Total</button></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Total:</div>
+                <div class="col-md-8" id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/compounder.js"></script> 
+</body>
+</html>

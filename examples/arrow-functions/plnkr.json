@@ -1,0 +1,8 @@
+{
+  "description": "Working with Lambdas",
+  "files":[
+    "!**/*.d.ts",
+    "!**/*.js"
+  ],
+  "tags": ["typescript"]
+}
