@@ -1,5 +1,6 @@
 examples/**/scripts/**/*.js.map
 examples/**/scripts/**/*.js
+!examples/typings/jquery.d.ts
 
 node_modules
 jspm_packages
