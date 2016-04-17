@@ -1,5 +1,4 @@
-﻿/// <reference path="../../typings/jquery.d.ts" />
-import { IAccount } from './iAccount';
+﻿import { IAccount } from './iAccount';
 
 export class AccountList {
     _accountList: IAccount[] = [];
@@ -11,5 +10,5 @@ export class AccountList {
     getAccounts(): IAccount[] {
         return this._accountList;
     }
-} 
+}
 
