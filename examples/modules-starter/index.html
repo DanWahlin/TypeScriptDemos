@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/examples/modules-simple/" />
+    <meta charset="utf-8" />
+    <title>Using Modules - Starter</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <h1>Simple Modules Example (starter - no modules exist yet)</h1>
+    
+  <script src="https://code.angularjs.org/tools/system.js"></script>
+  <script>
+    System.config({
+        packages: {
+          scripts: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+    System.import('scripts/main')
+          .then(null, console.error.bind(console));
+  </script>
+</body>
+</html>
