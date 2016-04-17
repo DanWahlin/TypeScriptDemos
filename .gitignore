@@ -1,4 +1,4 @@
-**/*.map
+examples/**/app/**/*.js.map
 examples/**/scripts/**/*.js
 examples/**/app/**/*.js
 
