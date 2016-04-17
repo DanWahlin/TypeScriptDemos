@@ -1,0 +1,67 @@
+<html lang="en"><head></head><body><form id="mainForm" method="post" action="http://plnkr.co/edit/?p=preview" target="_self"><input type="hidden" name="files[scripts/definingClasses.ts]" value="module DefiningClasses {
+    class Engine {
+        constructor(public horsePower: number, public engineType: string) { }
+    }
+
+    class Car {
+        private _engine: Engine;
+
+        constructor(engine: Engine) {
+            this.engine = engine;
+        }
+
+        get engine(): Engine {
+            return this._engine;
+        }
+
+        set engine(value: Engine) {
+            if (value == undefined) throw 'Please supply an engine';
+            this._engine = value;
+        }
+
+        start(): void {
+            render('Car engine started ' + this._engine.engineType);
+        }
+    }
+    
+    function render(text: string) {
+        document.getElementById('container').innerHTML += text + '<br />';
+    }
+
+    window.onload = function () {
+        var engine = new Engine(300, 'V8');
+        var car = new Car(engine);
+        render(car.engine.engineType);
+        car.start();
+    };
+}
+
+
+
+
+"><input type="hidden" name="files[index.html]" value="﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=&quot;utf-8&quot; />
+    <title>TypeScript HTML App</title>
+    <script src=&quot;scripts/definingClasses.js&quot;></script>
+</head>
+<body>
+    <h1>Using Classes</h1>
+
+    <div id=&quot;container&quot;></div>
+
+</body>
+</html>"><input type="hidden" name="files[license.md]" value="Copyright 2010-2015 Google, Inc. http://angularjs.org
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."><input type="hidden" name="tags[0]" value="angular2"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="typescript"><input type="hidden" name="private" value="true"><input type="hidden" name="description" value="Angular 2 Example - Working with Classes"></form><script>document.getElementById("mainForm").submit();</script></body></html>

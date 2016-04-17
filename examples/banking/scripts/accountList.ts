@@ -10,7 +10,7 @@ class AccountList {
     getAccounts(): IAccount[] {
         return this._accountList;
     }
-} 
+}
 
 var acctsHtml: string = '';
 var accountsDiv = $('#accounts');
@@ -21,7 +21,7 @@ var accList = new AccountList();
 accList.add(checkingAcct);
 accList.add(savingsAcct);
 
-accList.getAccounts().forEach((acct, index) => {  
+accList.getAccounts().forEach((acct, index) => {
     acctsHtml += acct.title + '<br />';
 });
 accountsDiv.html(acctsHtml);

@@ -1,0 +1,120 @@
+<html lang="en"><head></head><body><form id="mainForm" method="post" action="http://plnkr.co/edit/?p=preview" target="_self"><input type="hidden" name="files[scripts/classExtension.ts]" value="class Engine {
+    constructor(public horsePower: number, public engineType: string) { }
+
+    start(callback: (startStatus: boolean, engineType: string) => void) {
+        window.setTimeout(() => {
+            callback(true, this.engineType);
+        }, 1000);
+    }
+
+    stop(callback: (stopStatus: boolean, engineType: string) => void) {
+        window.setTimeout(() => {
+            callback(true, this.engineType);
+        }, 1000);
+    }
+}
+
+class Accessory {
+    constructor(public accessoryNumber: number, public title: string) {}
+}
+
+class Auto {
+    private _basePrice: number;
+    private _engine: Engine;
+    make: string;
+    model: string;
+    accessoryList: string;
+
+    constructor(basePrice: number, engine: Engine, make: string, model: string) {
+        this.engine = engine;
+        this.basePrice = basePrice;
+        this.make = make;
+        this.model = model;
+    }
+
+    calculateTotal() : number {
+        var taxRate = .08;
+        return this.basePrice + (taxRate * this.basePrice);
+    }
+
+    addAccessories(...accessories: Accessory[]) {
+        this.accessoryList = '';
+        for (var i = 0; i < accessories.length; i++) {
+            var ac = accessories[i];
+            this.accessoryList += ac.accessoryNumber + ' ' + ac.title + '<br />';
+        }
+    }
+
+    getAccessoryList(): string {
+        return this.accessoryList;
+    }
+
+    get basePrice(): number {
+        return this._basePrice;
+    }
+
+    set basePrice(value: number) {
+        if (value <= 0) throw 'price must be >= 0';
+        this._basePrice = value;
+    }
+
+    get engine(): Engine {
+        return this._engine;
+    }
+
+    set engine(value: Engine) {
+        if (value == undefined) throw 'Please supply an engine.';
+        this._engine = value;
+    }
+}  
+
+class Truck extends Auto {
+    bedLength: string;
+    fourByFour: boolean;
+
+    constructor(basePrice: number, engine: Engine, make: string, model: string,
+        bedLength: string, fourByFour: boolean) {
+        super(basePrice, engine, make, model);
+        this.bedLength = bedLength;
+        this.fourByFour = fourByFour;
+    }
+}
+
+
+window.onload = function () {
+    var truck = new Truck(40000, new Engine(300, 'V8'), 'Chevy', 'Silverado',
+                         'Long Bed', true);
+    truck.addAccessories(new Accessory(1234, 'Sunroof'), new Accessory(4321, 'Towing package'));
+    truck.engine.start((status: boolean, engineType: string) => {
+        document.getElementById('container').innerHTML = engineType + ' was started';
+    });
+};
+
+
+"><input type="hidden" name="files[index.html]" value="﻿<!DOCTYPE html>
+
+<html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;>
+<head>
+    <meta charset=&quot;utf-8&quot; />
+    <title>TypeScript HTML App</title>
+</head>
+<body>
+    <h1>Autos (shows class extension)</h1>
+
+    <div id=&quot;container&quot;></div>
+    
+    <script src=&quot;scripts/classExtension.js&quot;></script>
+</body>
+</html>"><input type="hidden" name="files[license.md]" value="Copyright 2010-2015 Google, Inc. http://angularjs.org
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."><input type="hidden" name="tags[0]" value="angular2"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="typescript"><input type="hidden" name="private" value="true"><input type="hidden" name="description" value="Angular 2 Example - Extending Classes"></form><script>document.getElementById("mainForm").submit();</script></body></html>

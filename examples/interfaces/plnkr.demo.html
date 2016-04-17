@@ -1,0 +1,162 @@
+<html lang="en"><head></head><body><form id="mainForm" method="post" action="http://plnkr.co/edit/?p=preview" target="_self"><input type="hidden" name="files[scripts/interfaces.ts]" value="namespace Interfaces {
+
+    export interface IEngine {
+        start(callback: (startStatus: boolean, engineType: string) => void): void;
+        stop(callback: (stopStatus: boolean, engineType: string) => void): void;
+    }
+
+    export interface IAutoOptions {
+        basePrice: number;
+        engine: IEngine;
+        state: string;
+        make: string;
+        model: string;
+        year: number;
+    }
+
+    export interface ITruckOptions extends IAutoOptions {
+        bedLength: string;
+        fourByFour: boolean;
+    }
+
+    export class Engine implements IEngine {
+        constructor(public horsePower: number, public engineType: string) { }
+
+        start(callback: (startStatus: boolean, engineType: string) => void) {
+            window.setTimeout(() => {
+                callback(true, this.engineType);
+            }, 1000);
+        }
+
+        stop(callback: (stopStatus: boolean, engineType: string) => void) {
+            window.setTimeout(() => {
+                callback(true, this.engineType);
+            }, 1000);
+        }
+    }
+
+    export class CustomEngine implements IEngine {
+        start(callback: (startStatus: boolean, engineType: string) => void) {
+            window.setTimeout(() => {
+                callback(true, 'Custom Engine');
+            }, 1000);
+        }
+
+        stop(callback: (stopStatus: boolean, engineType: string) => void) {
+            window.setTimeout(() => {
+                callback(true, 'Custom Engine');
+            }, 1000);
+        }
+    }
+
+    export class Accessory {
+        constructor(public accessoryNumber: number, public title: string) { }
+    }
+
+    export class Auto {
+        private _basePrice: number;
+        private _engine: IEngine;
+        state: string;
+        make: string;
+        model: string;
+        year: number;
+        accessoryList: string;
+
+        constructor(options: IAutoOptions) {
+            this.engine = options.engine;
+            this.basePrice = options.basePrice;
+            this.state = options.state;
+            this.make = options.make;
+            this.model = options.model;
+            this.year = options.year;
+        }
+
+        calculateTotal(): number {
+            var taxRate = .08;
+            return this.basePrice + (taxRate * this.basePrice);
+        }
+
+        addAccessories(...accessories: Accessory[]) {
+            this.accessoryList = '';
+            for (var i = 0; i < accessories.length; i++) {
+                var ac = accessories[i];
+                this.accessoryList += ac.accessoryNumber + ' ' + ac.title + '<br />';
+            }
+        }
+
+        getAccessoryList(): string {
+            return this.accessoryList;
+        }
+
+        get basePrice(): number {
+            return this._basePrice;
+        }
+
+        set basePrice(value: number) {
+            if (value <= 0) throw 'price must be >= 0';
+            this._basePrice = value;
+        }
+
+        get engine(): IEngine {
+            return this._engine;
+        }
+
+        set engine(value: IEngine) {
+            if (value == undefined) throw 'Please supply an engine.';
+            this._engine = value;
+        }
+    }
+
+    export class Truck extends Auto {
+        bedLength: string;
+        fourByFour: boolean;
+
+        constructor(options: ITruckOptions) {
+            super(options);
+            this.bedLength = options.bedLength;
+            this.fourByFour = options.fourByFour;
+        }
+    }
+
+}
+
+window.onload = function () {
+    var truck = new Interfaces.Truck({
+        engine: new Interfaces.Engine(250, 'V6'),
+        basePrice: 45000,
+        state: 'Arizona',
+        make: 'Ford',
+        model: 'F-150',
+        year: 2013,
+        bedLength: 'Short bed',
+        fourByFour: true
+    });
+
+    alert(truck.bedLength);
+
+};
+"><input type="hidden" name="files[index.html]" value="﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=&quot;utf-8&quot; />
+    <title>Using Interfaces</title>
+    <script src=&quot;scripts/interfaces.js&quot;></script>
+</head>
+<body>
+    <h1>Using Interfaces</h1>
+
+    <div id=&quot;content&quot;/>
+</body>
+</html>"><input type="hidden" name="files[license.md]" value="Copyright 2010-2015 Google, Inc. http://angularjs.org
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."><input type="hidden" name="tags[0]" value="angular2"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="typescript"><input type="hidden" name="private" value="true"><input type="hidden" name="description" value="Angular 2 Example - Using Interfaces"></form><script>document.getElementById("mainForm").submit();</script></body></html>

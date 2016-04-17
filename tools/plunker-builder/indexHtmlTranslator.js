@@ -3,6 +3,25 @@ module.exports = {
 };
 
 var _rxRules = {
+  tsplaceholder: {
+    from: /s*<!-- inject-ts-scripts -->/,
+    to: '%tag%'
+  },
+  defaultconfig: {
+    from: /s*<!-- inject-config -->/,
+    to: '%tag%'
+    // to: "" +
+    //   "<script>" +
+    //   "    System.config({" +
+    //   "      transpiler: 'typescript'," +
+    //   "      typescriptOptions: { emitDecoratorMetadata: true }," +
+    //   "      packages: {" +
+    //   "        'scripts': {defaultExtension: 'ts'}" +
+    //   "      }" +
+    //   "    });" +
+    //   "  System.import('scripts/main').then(null, console.error.bind(console));" +
+    //   "</script>"
+  },
   basehref: {
     from: /<base href=".*"[/]?>/,
     to: '<script>document.write(\'<base href="\' + document.location + \'" />\');</script>'
@@ -14,19 +33,19 @@ var _rxRules = {
   link: {
     from: '/<link rel="stylesheet" href=".*%tag%".*>/',
     to: '<link rel="stylesheet" href="%tag%">'
-  },
-  config: {
-    from: /\s*System.config\(\{[\s\S]*\}\);/m,
-    to: "\n" +
-        "      System.config({\n" +
-        "        transpiler: 'typescript', \n" +
-        "        typescriptOptions: { emitDecoratorMetadata: true }, \n" +
-        "        packages: {\n" +
-        "          'api': {defaultExtension: 'ts'}, \n" +
-        "          'app': {defaultExtension: 'ts'} \n" +
-        "        } \n" +
-        "      });"
-  },
+  }
+  // config: {
+  //   from: /\s*System.config\(\{[\s\S]*\}\);/m,
+  //   to: "\n" +
+  //   "      System.config({\n" +
+  //   "        transpiler: 'typescript', \n" +
+  //   "        typescriptOptions: { emitDecoratorMetadata: true }, \n" +
+  //   "        packages: {\n" +
+  //   "          'api': {defaultExtension: 'ts'}, \n" +
+  //   "          'app': {defaultExtension: 'ts'} \n" +
+  //   "        } \n" +
+  //   "      });"
+  // },
 
 };
 
@@ -35,9 +54,32 @@ var _rxData = [
     pattern: 'basehref',
   },
   {
+    pattern: 'tsplaceholder',
+    to: [
+      "<script src=\"https://code.angularjs.org/tools/system.js\"></script>",
+      "<script src=\"https://code.angularjs.org/tools/typescript.js\"></script>"
+    ]
+
+  },
+  {
+    pattern: 'defaultconfig',
+    to: [
+      "<script>",
+      "    System.config({",
+      "      transpiler: 'typescript',",
+      "      typescriptOptions: { emitDecoratorMetadata: true },",
+      "      packages: {",
+      "        'scripts': {defaultExtension: 'ts'}",
+      "      }",
+      "    });",
+      "  System.import('scripts/main').then(null, console.error.bind(console));",
+      "</script>"
+    ]
+  },
+  {
     pattern: 'script',
     from: 'node_modules/systemjs/dist/system.src.js',
-    to:   ['https://code.angularjs.org/tools/system.js', 'https://code.angularjs.org/tools/typescript.js']
+    to: ['https://code.angularjs.org/tools/system.js', 'https://code.angularjs.org/tools/typescript.js']
     //to:   ['https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js', 'https://code.angularjs.org/tools/typescript.js']
     // to: ['https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.js', 'https://code.angularjs.org/tools/typescript.js' ]
   },
@@ -117,15 +159,15 @@ var _rxData = [
     to: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css'
     // to: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css'
   },
-  {
-    pattern: 'config',
-  }
+  // {
+  //   pattern: 'config',
+  // }
 ];
 
 
 
 function translate(html) {
-  _rxData.forEach(function(rxDatum) {
+  _rxData.forEach(function (rxDatum) {
     var rxRule = _rxRules[rxDatum.pattern];
     // rxFrom is a rexexp
     var rxFrom = rxRule.from;
@@ -145,7 +187,7 @@ function translate(html) {
       });
       rxTo = to.join("\n    ");
     }
-    html = html.replace(rxFrom, rxTo );
+    html = html.replace(rxFrom, rxTo);
   });
 
   return html;

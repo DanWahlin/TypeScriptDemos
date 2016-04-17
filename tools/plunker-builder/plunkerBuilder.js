@@ -196,7 +196,23 @@ function createBasePlunkerHtml(useNewWindow) {
   // some may still want to open the plnk in a new window by opting-in via ctrl+click.  The
   // newWindow param allows for this possibility.
   var target = useNewWindow ? '_blank' : '_self';
-  var html = '<!DOCTYPE html><html lang="en"><body>'
+  var html = '<!DOCTYPE html><html lang="en">'
+  // html += '<head> '
+  // html += '<script src= "https://code.angularjs.org/tools/system.js" ></script>'
+  // html += '<script src="https://code.angularjs.org/tools/typescript.js"></script>'
+  // html += '<script>'
+  // html += '  System.config({'
+  // html += 'transpiler: \'typescript\','
+  // html += 'typescriptOptions: { emitDecoratorMetadata: true },'
+  // html += '  packages: {'
+  // html += '    \'scripts\': {defaultExtension: \'ts\'}'
+  // html += '  }'
+  // html += '});'
+  // html += 'System.import(\'scripts/main\')'
+  // html += ' .then(null, console.error.bind(console));'
+  // html += '</script></head>'
+  html += '<body>'
+
   html += '<form id="mainForm" method="post" action="' + url + '" target="' + target + '">'
 
   // html += '<div class="button"><button id="formButton" type="submit">Create Plunker</button></div>'
