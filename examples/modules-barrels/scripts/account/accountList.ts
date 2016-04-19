@@ -10,5 +10,5 @@ export class AccountList {
     getAccounts(): IAccount[] {
         return this._accountList;
     }
-} 
+}
 
