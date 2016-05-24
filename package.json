@@ -4,14 +4,14 @@
   "scripts": {
     "build": "tsc",
     "build:w": "tsc --watch",
-    "superstatic": "superstatic",
-    "start": "concurrently \"npm run build:w\" \"superstatic\" "
+    "lite": "lite-server",
+    "start": "tsc && concurrently \"npm run build:w\" \"npm run lite\" "
   },
   "dependencies": {
     "systemjs": "0.19.28"
   },
   "devDependencies": {
-    "superstatic": "^4.0.2",
+    "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
     "typings":"^1.0.4",
     "concurrently": "^2.1.0"
