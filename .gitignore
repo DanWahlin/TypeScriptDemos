@@ -1,4 +1,5 @@
 !examples/typings/jquery.d.ts
+!examples/cookbook/libs/*.js
 examples/**/scripts/**/*.js.map
 examples/**/scripts/**/*.js
 
