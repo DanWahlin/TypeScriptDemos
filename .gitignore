@@ -1,7 +1,8 @@
-!examples/typings/jquery.d.ts
-!examples/cookbook/libs/*.js
 examples/**/scripts/**/*.js.map
 examples/**/scripts/**/*.js
+
+!examples/typings/jquery.d.ts
+!examples/cookbook/src/scripts/libs/jquery-1.12.2.js
 
 node_modules
 jspm_packages
