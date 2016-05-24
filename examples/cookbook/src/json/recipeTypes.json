@@ -1,0 +1,108 @@
+﻿{
+    "recipeCategories": [
+        {
+            "title": "Appetizers",
+            "foodGroups": [ { "title": "vegetable" }, { "title": "grain" }, { "title": "meat" } ],
+            "details": "These foods are designed to awaken the palate prior to the meal. They should be savory, light, and easy to eat.",
+            "examples": [
+
+                {
+                    "name": "Potato Skins",
+                    "ingredients": [ "Potatoes", "Cheese", "Bacon", "Sour Cream" ],
+                    "prepTime": "20 minutes"
+                },
+
+                {
+                    "name": "Salsa",
+                    "ingredients": [ "Tomatoes", "Chili Peppers", "Garlic", "Cilantro" ],
+                    "prepTime": "15 minutes"
+                },
+
+                {
+                    "name": "Cheese Ball",
+                    "ingredients": [ "Cheddar Cheese", "Milk", "Butter", "Cream Cream" ],
+                    "prepTime": "20 minutes"
+                }
+
+
+            ]
+        },
+        {
+            "title": "Pasta dishes",
+            "foodGroups": [ { "title": "grain" } ],
+            "details": "Pasta dishes are served as a first course in many parts of the world. They are among the most versatile of dishes and cook's can get very creative with them.",
+            "examples": [
+                { "name": "Pasta Bolognese", "ingredients": [ "Spaghetti", "Garlic", "Sausage", "Basil" ], "prepTime": "45 Minutes" },
+                { "name": "Spaghetti Carbonara", "ingredients": [ "Spaghetti", "Bacon", "Parmasean Cheese", "Butter" ], "prepTime": "25 Minutes" },
+                {
+                    "name": "Pesto",
+                    "ingredients": [ "Fetuccini", "Basil", "Parsley" ],
+                    "prepTime": "30 Minutes"
+                }
+            ]
+        },
+        {
+            "title": "Vegetarian dishes",
+            "foodGroups": [ { "title": "vegetable" }, { "title": "grain" } ],
+            "details": "These dishes are not just for vegetarians. Including dishes based around vegetables, grains, or legumes help round out your meal and offer variety for those who choose not to eat meat.",
+            "examples": [
+                { "name": "Spanish Rice", "ingredients": [ "Rice", "Garlic", "Sweet Peppers", "Chili Powder" ], "prepTime": "25 Minutes" },
+                { "name": "Baked Beans", "ingredients": [ "Navy Beans", "Onion", "Brown Sugar", "Mustard" ], "prepTime": "60 Minutes" },
+                { "name": "Polenta", "ingredients": [ "Cornmeal", "Water" ], "prepTime": "30 Minutes" }
+            ]
+        },
+        {
+            "title": "Salads",
+            "foodGroups": [ { "title": "vegetable" } ],
+            "details": "Some cooks serve a salad course at the end of the meal. These dishes can include just about anything including a variety of cured meats and even grains.",
+            "examples": [
+                { "name": "Chicken Salad", "ingredients": [ "Cooked Chicken", "Onions", "Mayonnaise", "Celery" ], "prepTime": "20 Minutes" },
+                { "name": "Taco Salad", "ingredients": [ "Tortilla Chips", "Garlic", "Ground Beef", "Chili Powder" ], "prepTime": "15 Minutes" }
+            ]
+        },
+        {
+            "title": "Meat dishes",
+            "foodGroups": [
+                { "title": "meat" }
+            ],
+            "details": "A great source of protein, well-prepared meat dishes can serve as the main course or a fancy side dish for any meal.",
+            "examples": [
+                { "name": "Pot Roast", "ingredients": [ "Beef Chuck", "Carrots", "Potatoes", "Tomato Juice" ], "prepTime": "15 Minutes" },
+                { "name": "London Broil", "ingredients": [ "Flank Steak", "Vinegar", "Salt", "Garlic" ], "prepTime": "20 Minutes" },
+                { "name": "Pork Chops", "ingredients": [ "Pork Loin", "Butter", "Milk", "Bread" ], "prepTime": "10 Minutes" }
+
+            ]
+        },
+        {
+            "title": "Breads",
+            "foodGroups": [ { "title": "grain" } ],
+            "details": "Breads provide a great source of grain and can be used to complement any meal. Many cooks prepare bread as an appetizer.",
+            "examples": [
+                { "name": "Sourdough Bread", "ingredients": [ "Starter", "Yeast", "Sugar", "Baking Soda" ], "prepTime": "60 Minutes" },
+                { "name": "Banana Bread", "ingredients": [ "Flour", "Bananas", "Walnuts", "Sugar" ], "prepTime": "15 Minutes" }
+            ]
+
+        },
+        {
+            "title": "Sauces",
+            "foodGroups": [ { "title": "vegetable" }, { "title": "grain" } ],
+            "details": "While not a 'dish' in the strict sense, sauces are an integral part of a well-balanced flavor profile for most dishes. Use them with meats, vegetables, or even a dip for breads.",
+            "examples": [
+                { "name": "Cheese Sauce", "ingredients": [ "Cheddar Cheese", "Flour", "Water", "Milk" ], "prepTime": "20 Minutes" },
+                { "name": "Hollandaise Sauce", "ingredients": [ "Butter", "Eggs", "Lemon Juice", "Pepper" ], "prepTime": "15 Minutes" }
+            ]
+        },
+        {
+            "title": "Desserts",
+            "foodGroups": [ { "title": "sugar" }, { "title": "grain" } ],
+            "details": "No meal is complete without something sweet to end the dining experience. Cooks have gotten very creative with desserts turning them into artwork that makes a meal memorable.",
+            "examples": [
+                { "name": "Chocolate Chip Cookies", "ingredients": [ "Flour", "Butter", "Chocolate Chips", "Sugar" ], "prepTime": "25 Minutes" },
+                { "name": "Applesauce", "ingredients": [ "Cooking Apples", "Sugar", "Water", "Cinnamon" ], "prepTime": "25 Minutes" },
+                { "name": "Gingerbread", "ingredients": [ "Flour", "Sugar", "Cinnamon", "Molasses" ], "prepTime": "20 Minutes" }
+            ]
+
+        }
+
+    ]
+}

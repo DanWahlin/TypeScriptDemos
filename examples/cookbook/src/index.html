@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Cook's Collections</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-1">
+            <img class="logoImg" src="images/cutlery.png" />
+        </div>
+        <div class="col-md-11 pull-left">
+            <h1>Cook's Collections: A Cookbook App</h1>
+        </div>
+    </div>
+    <h3>Recipe Type</h3>
+    <div>
+        <select id="RecipeCategory">
+            <option disabled>Choose a type. . .</option>
+        </select>
+    </div>
+
+    <h3>Description</h3>
+    <div id="recipeDesc"></div>
+
+    <h3>Primary Ingredient(s)</h3>
+    <div class="foodGroups" id="FoodGroups"></div>
+
+    <h3>Examples</h3>
+    <div class="examples" id="examples"></div>
+
+    <script src="scripts/libs/jquery-1.12.2.js"></script>
+    <script src="scripts/recipeLoader.js"></script>
+    <script src="scripts/renderer.js"></script>
+    <script src="scripts/baseRecipeCategory.js"></script>
+    <script src="scripts/recipeCategory.js"></script>
+    <script src="scripts/recipeCategorySummary.js"></script>
+    <script src="scripts/recipeCategories.js"></script>
+    <script src="scripts/foodGroup.js"></script>
+    <script src="scripts/recipeExample.js"></script>
+    <script src="scripts/ingredient.js"></script>
+    <script src="scripts/bootstrapper.js"></script>
+</body>
+</html>

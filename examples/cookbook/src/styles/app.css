@@ -1,0 +1,32 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 40px;
+}
+
+span {
+    font-style: italic;
+}
+
+textarea
+{
+    width: 200px;
+    height: 100px;
+
+margin-top: 5px; 
+}
+
+.foodGroups
+{
+    /*float:left*/
+}
+
+.logoImg
+{
+    float:left;
+    margin-bottom: 5px;
+    margin-right: 5px; 
+}
+.examples
+{
+    float:left;
+}

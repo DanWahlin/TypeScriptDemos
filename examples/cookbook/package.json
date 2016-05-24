@@ -1,0 +1,26 @@
+{
+  "name": "intro-to-typescript",
+  "version": "1.0.0",
+  "description": "Introduction to TypeScript",
+  "scripts": {
+    "postinstall": "",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch",
+    "start": "concurrently \"npm run tsc:w\" \"superstatic\" "
+  },
+  "dependencies": {
+    "superstatic": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^4.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.4",
+    "tslint": "^3.10.2",
+    "typescript": "^1.8.10",
+    "typings":"^1.0.4",
+    "concurrently": "^2.1.0"
+  }
+}
