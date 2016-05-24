@@ -2,18 +2,18 @@
   "name": "typescript-examples",
   "version": "0.0.1",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc --watch",
+    "build": "tsc",
+    "build:w": "tsc --watch",
     "superstatic": "superstatic",
-    "start": "concurrently \"npm run tsc:w\" \"superstatic\" "
+    "start": "concurrently \"npm run build:w\" \"superstatic\" "
   },
   "dependencies": {
-    "systemjs": "0.19.25"
+    "systemjs": "0.19.28"
   },
   "devDependencies": {
     "superstatic": "^4.0.2",
     "typescript": "^1.8.10",
-    "typings":"^0.7.12",
-    "concurrently": "^2.0.0"
+    "typings":"^1.0.4",
+    "concurrently": "^2.1.0"
   }
 }
