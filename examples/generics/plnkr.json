@@ -1,5 +1,5 @@
 {
-  "description": "Genrics",
+  "description": "Generics",
   "files":[
     "!**/*.d.ts",
     "!**/*.js"
