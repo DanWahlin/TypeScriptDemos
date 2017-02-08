@@ -8,7 +8,7 @@
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" "
   },
   "dependencies": {
-    "systemjs": "0.19.39"
+    "systemjs": "0.20.5"
   },
   "devDependencies": {
     "lite-server": "^2.2.2",
