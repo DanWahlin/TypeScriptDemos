@@ -1,6 +1,4 @@
-﻿/// <reference path="../../typings/jquery.d.ts" />
-
-class SavingsAccount extends BankingAccount {
+﻿class SavingsAccount extends BankingAccount {
     private _interestRate: number;
 
     constructor(title: string, interestRate: number) {

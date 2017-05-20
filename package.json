@@ -8,12 +8,12 @@
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" "
   },
   "dependencies": {
-    "systemjs": "0.20.5"
+    "systemjs": "0.20.12"
   },
   "devDependencies": {
-    "lite-server": "^2.2.2",
-    "typescript": "^2.1.5",
-    "typings":"^2.1.0",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.3.2",
+    "@types/jquery": "2.0.45",
     "concurrently": "^3.1.0"
   }
 }

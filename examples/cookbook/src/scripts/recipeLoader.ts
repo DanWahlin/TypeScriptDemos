@@ -1,6 +1,4 @@
-﻿/// <reference path="typings/jquery.d.ts" />
-
-class RecipeLoader {
+﻿class RecipeLoader {
   
     constructor(public url: string) {}
 

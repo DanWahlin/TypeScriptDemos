@@ -1,5 +1,4 @@
-﻿/// <reference path="../../typings/jquery.d.ts" />
-
+﻿
 class CheckingAccount extends BankingAccount {
     constructor(title: string) {
         super(title);

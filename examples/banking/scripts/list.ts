@@ -1,4 +1,4 @@
-﻿/// <reference path="../../typings/jquery.d.ts" />
+﻿
 class ListOfNumbers {
     _items: number[] = [];
 

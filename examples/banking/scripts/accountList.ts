@@ -1,5 +1,4 @@
-﻿/// <reference path="../../typings/jquery.d.ts" />
-
+﻿
 class AccountList {
     _accountList: IAccount[] = [];
 

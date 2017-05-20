@@ -1,5 +1,3 @@
-/// <reference path="../../typings/jquery.d.ts" />
-
 $(document).ready(function () {
     var calc = new CalculatorjQuery('X','Y','Output');
 });
