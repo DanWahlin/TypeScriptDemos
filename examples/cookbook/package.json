@@ -9,18 +9,18 @@
     "start": "concurrently \"npm run tsc:w\" \"superstatic\" "
   },
   "dependencies": {
-    "superstatic": "^4.0.2"
+    "superstatic": "^4.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-debug": "^2.1.2",
-    "gulp-inject": "^4.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-tslint": "^5.0.0",
-    "gulp-typescript": "^2.13.4",
-    "tslint": "^3.10.2",
+    "gulp-debug": "^3.1.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-tslint": "^8.0.0",
+    "gulp-typescript": "^3.1.6",
+    "tslint": "^5.2.0",
     "typescript": "^2.3.2",
     "@types/jquery":"2.0.45",
-    "concurrently": "^2.1.0"
+    "concurrently": "^3.4.0"
   }
 }
