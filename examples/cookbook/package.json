@@ -19,8 +19,8 @@
     "gulp-tslint": "^8.0.0",
     "gulp-typescript": "^3.1.6",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
-    "@types/jquery":"2.0.45",
+    "typescript": "^2.3.4",
+    "@types/jquery":"2.0.46",
     "concurrently": "^3.4.0"
   }
 }

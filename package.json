@@ -1,19 +1,18 @@
 {
   "name": "typescript-examples",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
-    "lite": "lite-server",
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" "
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\""
   },
   "dependencies": {
-    "systemjs": "0.20.12"
+    "systemjs": "0.20.14"
   },
   "devDependencies": {
     "lite-server": "^2.3.0",
-    "typescript": "^2.3.2",
-    "@types/jquery": "2.0.45",
-    "concurrently": "^3.1.0"
+    "typescript": "^2.3.4",
+    "@types/jquery": "2.0.46",
+    "concurrently": "^3.4.0"
   }
 }
