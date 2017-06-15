@@ -1,7 +1,13 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
-      "examples/**/*.js.map": true,
-      "examples/**/*.js": true
+      "**/*.js": {
+        "when": "$(basename).ts"
+      },
+      "**/*.js.map": {
+        "when": "$(basename)"
+      }
+      // "examples/**/*.js.map": true,
+      // "examples/**/*.js": true
     }
 }
