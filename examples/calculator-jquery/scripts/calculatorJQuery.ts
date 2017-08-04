@@ -16,10 +16,10 @@ class CalculatorjQuery {
 
     private wireEvents() {
         $('#Add').click(event => {
-                this.output.html(this.add(parseInt(this.x.val()), parseInt(this.y.val())).toString());
+                this.output.html(this.add(parseInt(this.x.val().toString()), parseInt(this.y.val().toString())).toString());
             });
         $('#Subtract').click(event => {
-                this.output.html(this.subtract(parseInt(this.x.val()), parseInt(this.y.val())).toString());
+                this.output.html(this.subtract(parseInt(this.x.val().toString()), parseInt(this.y.val().toString())).toString());
             });
     }
 
