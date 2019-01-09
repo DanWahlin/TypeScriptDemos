@@ -10,9 +10,9 @@
     "systemjs": "0.20.17"
   },
   "devDependencies": {
-    "lite-server": "2.3.0",
-    "typescript": "2.4.2",
-    "@types/jquery": "3.2.11",
-    "concurrently": "3.5.0"
+    "lite-server": "2.4.0",
+    "typescript": "3.2.2",
+    "@types/jquery": "3.3.29",
+    "concurrently": "4.1.0"
   }
 }
