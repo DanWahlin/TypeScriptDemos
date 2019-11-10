@@ -1,0 +1,13 @@
+﻿html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    padding-top: 20px;
+}
+
+.label {
+    font-weight: bold;
+}

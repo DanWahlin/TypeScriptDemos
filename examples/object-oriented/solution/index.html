@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bank Accounts</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="src/styles/styles.css" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-university" aria-hidden="true"></i> Acme Bank
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="main.changeView('checking')">Checking Account</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="main.changeView('savings')">Savings Account</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <br />
+    <main class="container">
+        <div id="viewTemplate">
+            
+        </div>
+    </main>
+
+    <script src="../dist/bundle.js"></script>
+
+
+</body>
+
+</html>

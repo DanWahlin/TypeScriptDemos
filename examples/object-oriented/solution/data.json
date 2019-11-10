@@ -1,0 +1,13 @@
+{
+    "checkingAccount": {
+        "id": 1,
+        "balance": 500,
+        "title": "Jane Doe Checking"
+    },
+    "savingsAccount": {
+        "id": 2,
+        "balance": 1500,
+        "title": "Jane Doe Savings",
+        "interestRate": 2.5
+    }
+}
