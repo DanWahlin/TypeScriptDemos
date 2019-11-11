@@ -1,6 +1,4 @@
-## Final Code Solution
-
-This is the final code solution for the course.
+## Introduction to Object-Oriented Programming in TypeScript
 
 ### Steps to Run the Code
 

@@ -1,6 +1,4 @@
-## Final Code Solution
-
-This is the final code solution for the course.
+## Classes and Objects
 
 ### Steps to Run the Code
 

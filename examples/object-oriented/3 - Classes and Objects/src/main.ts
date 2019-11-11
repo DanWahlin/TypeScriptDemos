@@ -5,7 +5,8 @@ class Main {
     checkingAccount: CheckingAccount;
 
     constructor(private renderer: Renderer) {
-        this.checkingAccount = new CheckingAccount('Jane Doe Checking');
+        // Create CheckingAccount instance
+        this.checkingAccount = new CheckingAccount('John Doe Checking');
         this.renderAccount();
     }
 
@@ -31,7 +32,7 @@ class Main {
             this.checkingAccount.deposit(amount);
         }
         else {
-            this.checkingAccount.widthdrawal(amount);
+            this.checkingAccount.withdrawal(amount);
         }
         this.renderAccount();
 
