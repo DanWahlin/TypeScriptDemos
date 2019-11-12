@@ -1,14 +1,14 @@
 import { CheckingAccount } from './scripts/checking-account';
 import { SavingsAccount } from './scripts/savings-account';
 import { AccountList } from './scripts/account-list';
-import { BankingAccount } from './scripts/bank-account';
+import { BankAccount } from './scripts/bank-account';
 import { Renderer } from './scripts/renderer';
 import { AccountType } from './scripts/enums';
 
 class Main {
     checkingAccount: CheckingAccount;
     savingsAccount: SavingsAccount;
-    currentAccount: BankingAccount;
+    currentAccount: BankAccount;
 
     constructor(private renderer: Renderer) { }
 
@@ -46,7 +46,7 @@ class Main {
     }
 
 
-    renderAccount(account: BankingAccount) {
+    renderAccount(account: BankAccount) {
         const accountType = AccountType[account.accountType];
         const html = `
                 <h3>${accountType} Account</h3>
@@ -65,14 +65,23 @@ class Main {
     depositWithDrawal(deposit: boolean) {
         let amountInput: HTMLInputElement = document.querySelector('#depositWithdrawalAmount');
         let amount = +amountInput.value;
-        if (deposit) {
-            this.currentAccount.deposit(amount);
+        let error;
+        try {
+            if (deposit) {
+                this.currentAccount.deposit(amount);
+            }
+            else {
+                this.currentAccount.withdrawal(amount);
+            }
         }
-        else {
-            this.currentAccount.widthdrawal(amount);
+        catch (e) {
+            error = e;
         }
-        this.renderAccount(this.currentAccount);
 
+        this.renderAccount(this.currentAccount);
+        if (error) {
+            this.renderer.renderError(error.message);
+        }
     }
 }
 

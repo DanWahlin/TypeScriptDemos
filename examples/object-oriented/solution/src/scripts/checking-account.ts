@@ -1,8 +1,8 @@
-﻿import { BankingAccount } from './bank-account';
+﻿import { BankAccount } from './bank-account';
 import { AccountType } from './enums';
 import { AccountSettings } from './interfaces';
 
-export class CheckingAccount extends BankingAccount {
+export class CheckingAccount extends BankAccount {
 
     accountType = AccountType.Checking;
 

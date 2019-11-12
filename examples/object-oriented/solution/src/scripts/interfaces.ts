@@ -5,7 +5,7 @@
 
 export interface DepositWithdrawal {
     deposit(amount: number): void; 
-    widthdrawal(amount: number): void;
+    withdrawal(amount: number): void;
 }
 
 export interface AccountSettings {

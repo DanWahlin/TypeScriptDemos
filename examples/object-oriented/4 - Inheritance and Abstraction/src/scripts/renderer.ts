@@ -6,8 +6,4 @@ export class Renderer {
     render(html: string) {
         this.viewTemplate.innerHTML = html;
     }
-
-    renderError(message: string) {
-        this.viewTemplate.innerHTML += `<br /><br /><div class="alert alert-danger">${message}</div>`;
-    }
 }

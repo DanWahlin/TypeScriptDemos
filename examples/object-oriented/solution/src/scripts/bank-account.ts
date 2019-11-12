@@ -2,7 +2,7 @@
 import { Constants } from './constants';
 import { AccountType } from './enums';
 
-export abstract class BankingAccount implements Account {
+export abstract class BankAccount implements Account {
     id: number;
     title: string;
     private _balance = 0;
@@ -15,11 +15,11 @@ export abstract class BankingAccount implements Account {
     }
 
     deposit(amount: number) {
-        this._balance += amount;
+        this.balance += amount;
     }
 
-    widthdrawal(amount: number) {
-        this._balance -= amount;
+    withdrawal(amount: number) {
+        this.balance -= amount;
     }
 
     get accountInfo() : AccountInfo<string, number> {
@@ -34,7 +34,12 @@ export abstract class BankingAccount implements Account {
     }
 
     set balance(val: number) {
-        this._balance = val;
+        if (val >= 0) {
+            this._balance = val;
+        }
+        else {
+            throw Error('Balance cannot be negative!');
+        }
     }
 
 } 

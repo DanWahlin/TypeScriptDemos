@@ -1,9 +1,9 @@
-﻿import { BankingAccount } from './bank-account';
+﻿import { BankAccount } from './bank-account';
 import { AccountType } from './enums';
 import { AccountSettings } from './interfaces';
 
 
-export class SavingsAccount extends BankingAccount {
+export class SavingsAccount extends BankAccount {
     private _interestRate: number;
     accountType = AccountType.Savings;
 
