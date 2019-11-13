@@ -1,10 +1,10 @@
 import { AccountType } from './enums';
 
-export class BankAccount {
+export abstract class BankAccount {
     private _balance = 0;
     id: number;
     title: string;
-    accountType: AccountType;
+    abstract accountType: AccountType;
 
     constructor(accountSettings: any) {
         this.id = accountSettings.id;
@@ -19,6 +19,8 @@ export class BankAccount {
     withdrawal(amount: number) {
         this.balance -= amount;
     }
+
+    abstract getAccountInfo(): any;
 
     get balance() {
         return this._balance;

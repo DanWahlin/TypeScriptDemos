@@ -22,7 +22,7 @@ export abstract class BankAccount implements Account {
         this.balance -= amount;
     }
 
-    get accountInfo() : AccountInfo<string, number> {
+    getAccountInfo() : AccountInfo<string, number> {
         return {
             routingNumber: Constants.ROUTING_NUMBER,
             bankNumber: Constants.BANK_NUMBER

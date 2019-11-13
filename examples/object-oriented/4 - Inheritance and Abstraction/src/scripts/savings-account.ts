@@ -15,6 +15,12 @@ export class SavingsAccount extends BankAccount {
         }, 60000);
     }
 
+    getAccountInfo() {
+        return {
+
+        };
+    }
+
     private addInterest() {
         this.balance = this.balance + (this.balance * (this._interestRate / 100));
     }
