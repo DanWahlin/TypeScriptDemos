@@ -44,8 +44,7 @@ class Main {
         });
         return acctsHtml;
     }
-
-
+    
     renderAccount(account: BankAccount) {
         const accountType = AccountType[account.accountType];
         const html = `

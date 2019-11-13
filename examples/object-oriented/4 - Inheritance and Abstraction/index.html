@@ -12,9 +12,23 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fa fa-university" aria-hidden="true"></i> Acme Bank
-            </a>
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-university" aria-hidden="true"></i> Acme Bank
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="main.changeView('checking')">Checking Account</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="main.changeView('savings')">Savings Account</a>
+                </li>
+            </ul>
+        </div>
         </div>
     </nav>
     <br />
