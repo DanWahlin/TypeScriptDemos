@@ -1,13 +1,13 @@
-﻿import { BankAccount } from './bank-account';
+﻿import { Account } from './interfaces';
 
 export class AccountList { 
-    _accountList: BankAccount[] = [];
+    _accountList: Account[] = [];
 
-    add(account: BankAccount) {
+    add(account: Account) {
         this._accountList.push(account);
     }
 
-    getAccounts(): BankAccount[] {
+    getAccounts(): Account[] {
         return this._accountList;
     }
 } 

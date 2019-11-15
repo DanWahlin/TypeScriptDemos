@@ -1,11 +1,13 @@
-import { BankAccount } from './bank-account';
+﻿import { BankAccount } from './bank-account';
 import { AccountType } from './enums';
+import { AccountSettings } from './interfaces';
+
 
 export class SavingsAccount extends BankAccount {
     private _interestRate: number;
     accountType = AccountType.Savings;
 
-    constructor(accountSettings: any) {
+    constructor(accountSettings: AccountSettings) {
         super(accountSettings);
         this._interestRate = accountSettings.interestRate;
 
@@ -13,12 +15,6 @@ export class SavingsAccount extends BankAccount {
         setInterval(() => {
             this.addInterest();
         }, 60000);
-    }
-
-    getAccountInfo() {
-        return {
-
-        };
     }
 
     private addInterest() {
