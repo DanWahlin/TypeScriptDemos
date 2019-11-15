@@ -1,4 +1,4 @@
-## Module 5
+## Putting It All Together
 
 Thanks for checking out the `Creating Object-Oriented TypeScript Code` course on Pluralsight!
 
