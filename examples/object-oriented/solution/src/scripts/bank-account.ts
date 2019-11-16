@@ -26,7 +26,7 @@ export abstract class BankAccount implements Account {
         return {
             routingNumber: Constants.ROUTING_NUMBER,
             bankNumber: Constants.BANK_NUMBER
-        }
+        };
     }
 
     get balance() {
