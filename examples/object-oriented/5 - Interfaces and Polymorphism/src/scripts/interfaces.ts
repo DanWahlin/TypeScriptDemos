@@ -4,9 +4,9 @@
 }
 
 export interface DepositWithdrawal {
-    deposit(amount: number): void; 
+    deposit(amount: number): void;
     withdrawal(amount: number): void;
-}
+} 
 
 export interface AccountSettings {
     id: number;  
@@ -14,8 +14,6 @@ export interface AccountSettings {
     balance : number;          
     interestRate?: number;
     accountInfo?: AccountInfo<string, number>;
-}
+}  
 
 export interface Account extends AccountSettings, DepositWithdrawal { }
-
-
