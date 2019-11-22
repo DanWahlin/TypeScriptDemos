@@ -4,7 +4,7 @@ import { Renderer } from './scripts/renderer';
 class Main {
     checkingAccount: CheckingAccount;
 
-    constructor(private renderer: Renderer) {
+    constructor(/* private renderer: Renderer */) {
         // Create CheckingAccount instance
         this.checkingAccount = new CheckingAccount('John Doe Checking');
         this.renderAccount();
@@ -22,7 +22,7 @@ class Main {
                 <button onclick="main.depositWithDrawal(true)">Deposit</button>&nbsp;
                 <button onclick="main.depositWithDrawal(false)">Withdrawal</button>&nbsp;
             `;
-        this.renderer.render(html);
+        Renderer.render(html);
     }
 
     depositWithDrawal(deposit: boolean) {
@@ -40,8 +40,9 @@ class Main {
 }
 
 // Create main object and add handlers for it
-const renderer = new Renderer(document.querySelector('#viewTemplate'));
-const main = new Main(renderer);
+// const renderer = new Renderer(document.querySelector('#viewTemplate'));
+Renderer.viewTemplate = document.querySelector('#viewTemplate');
+const main = new Main(/* renderer*/);
 
 // Quick and easy way to expose a global API that can hook to the Main object
 // so that we can get to it from click and events and others.
