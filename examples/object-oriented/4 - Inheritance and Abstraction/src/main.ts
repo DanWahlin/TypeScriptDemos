@@ -20,7 +20,8 @@ class Main {
         this.savingsAccount = new SavingsAccount({
             id: 100,
             title: 'Jane Doe Savings',
-            balance: 10000
+            balance: 10000,
+            interestRate: 2.5
         });
         let html = this.renderAccounts();
         this.renderer.render('<h2>Welcome to Acme Bank!</h2><br /><h5>Your Accounts:</h5><br />' + html);

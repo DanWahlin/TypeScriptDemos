@@ -21,6 +21,11 @@ export class SavingsAccount extends BankAccount {
         };
     }
 
+    deposit(amount: number) {
+        let newAmount = amount + (amount * (this._interestRate / 100));
+        this.balance += newAmount;
+    }
+
     private addInterest() {
         this.balance = this.balance + (this.balance * (this._interestRate / 100));
     }
