@@ -9,7 +9,7 @@
     "removeComments": false,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
-    "lib": ["es2016","dom"]
+    "lib": ["es2018","dom"]
   },
   "exclude": [
     "node_modules",
