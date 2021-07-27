@@ -1,8 +1,0 @@
-{
-  "description": "Unions, Aliases and Const Enums",
-  "files":[
-    "!**/*.d.ts",
-    "!**/*.js"
-  ],
-  "tags": ["typescript"]
-}

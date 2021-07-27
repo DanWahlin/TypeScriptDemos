@@ -1,8 +1,0 @@
-{
-  "description": "Extending Classes",
-  "files":[
-    "!**/*.d.ts",
-    "!**/*.js"
-  ],
-  "tags": ["typescript"]
-}

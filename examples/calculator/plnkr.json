@@ -1,8 +1,0 @@
-{
-  "description": "Calculator Example",
-  "files":[
-    "!**/*.d.ts",
-    "!**/*.js"
-  ],
-  "tags": ["typescript"]
-}
