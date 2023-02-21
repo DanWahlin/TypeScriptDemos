@@ -3,6 +3,8 @@ import { SavingsAccount } from './savingsAccount';
 import { AccountList } from './accountList';
 
 class Bootstrapper {
+  
+  
     
     $(selector: string) {
         return document.querySelector(selector);
